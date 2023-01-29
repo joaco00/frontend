@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="../js/cliente.js"></script>
+  <title>Agregar Cliente</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Actividad</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../cliente/lista_clientes.html">Lista de clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../resultado/lista_resultados.html">Lista de resultado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../gestión/lista_gestion.html">Lista de gestión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../tipo gestión/lista_tipo_gestion.html">Lista de tipo gestión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../usuario/lista_usuarios.html">Lista de usuarios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Agregar Cliente</h1>
+    <!-- formulario de ingreso de cliente-->
+    <form" >
+      <!-- RUT -->
+      <div class="mb-3">
+        <label for="txt_rut" class="form-label">RUT</label>
+        <input type="text" class="form-control" id="txt_rut" aria-describedby="txt_rut_Help" required>
+        <div id="txt_rut_Help" class="form-text" style="color: rgb(202, 10, 10);">RUT del cliente *</div>
+      </div>
+      <!-- DV -->
+      <div class="mb-3">
+        <label for="txt_dv" class="form-label">DV</label>
+        <input type="text" class="form-control" id="txt_dv" aria-describedby="txt_dv_Help" required>
+        <div id="txt_dv_Help" class="form-text" style="color: rgb(202, 10, 10);" >Dígito verificador *</div>
+      </div>
+      <!-- Nombres -->
+      <div class="mb-3">
+        <label for="txt_nombres" class="form-label">Nombres</label>
+        <input type="text" class="form-control" id="txt_nombres" aria-describedby="txt_nombres_Help">
+        <div id="txt_nombres_Help" class="form-text" style="color: rgb(202, 10, 10);">Nombres *</div>
+      </div>
+
+      <!-- Apellidos -->
+      <div class="mb-3">
+        <label for="txt_apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="txt_apellidos" aria-describedby="txt_apellidos_Help" required>
+        <div id="txt_apellidos_Help" class="form-text" style="color: rgb(202, 10, 10);">Apellido paterno y materno *</div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="txt_email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="txt_email" aria-describedby="txt_email_Help" required>
+        <div id="txt_email_Help" class="form-text" style="color: rgb(202, 10, 10);">Correo electrónico *</div>
+      </div>
+      <!-- Celular -->
+      <div class="mb-3">
+        <label for="txt_celular" class="form-label">Celular</label>
+        <input type="text" class="form-control" id="txt_celular" aria-describedby="txt_celular_Help" required>
+        <div id="txt_celular_Help" class="form-text" style="color: rgb(202, 10, 10);">Número de teléfono móvil *</div>
+      </div>
+      <!-- Fecha de registro -->
+      <div class="mb-3">
+        <label for="txt_fecha_registro" class="form-label">Fecha de registro</label>
+        <input type="text" class="form-control" id="txt_fecha_registro" aria-describedby="txt_fecha_registro_Help" required>
+        <div id="txt_fecha_registro_Help" class="form-text" style="color: rgb(202, 10, 10);">Fecha de registro *</div>
+      </div>
+      <!-- Confirmación -->
+      <div style="text-align: center ;">
+      <a href="javascript:history.back();" class="btn btn-light">Volver</a>
+      <button  type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" >Enviar</button>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+            </div>
+            <div class="modal-body">
+              ¿Seguro quieres agregar?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+              <button type="button" class="btn btn-success" onclick="agregar_cliente();">Agregar</button>
+            </div>
+          </div>
+        </div>
+        </div> 
+    </form>
+
+</body>
+
+</html>

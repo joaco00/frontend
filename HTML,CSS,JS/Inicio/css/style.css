@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.cnt-titulo{
+    background-color: rgb(190, 55, 73);
+}
+#titulo b{
+    color:#46a2fd;
+}
+
+#links{
+    text-decoration: none;
+    content: normal;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+
+#imagen{
+    margin-left: 10px;
+    height: 80px;
+}

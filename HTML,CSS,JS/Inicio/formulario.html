@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/funciones.js" language="javascript"> </script>
+    <link rel="stylesheet" href="formulario.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>Calculando peso ideal</h1>
+        <hr />
+        <h2>Ingrese los datos solicitados</h2>
+      </header>
+    </div>
+    <div id="cnt-formulario">
+      <form>
+      <table border="0">
+        <tr>
+         <td><label>Edad</label></td>
+         <td><input type="text" id="txt_edad"></td>
+        </tr>
+        <tr>
+            <td><label>Peso actual</label></td>
+            <td><input type="text" id="txt_peso"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input id="button" type="button" value="Calcular" onclick="calcularPesoideal()" ></td>
+        </tr>
+      </table>
+    </form>
+    </div>
+    <div id="cnt-error"></div>
+    <div id="cnt_resultado_texto"></div>
+    <div id="cnt_resultado_texto_estado_peso"></div>
+    <div id="cnt_resultado_img"></div>
+    <div>
+      <a href="index.html">Volver</a>
+    </div>
+
+  </body>
+</html>
